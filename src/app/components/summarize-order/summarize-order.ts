@@ -8,6 +8,13 @@ import { EcommerceStore } from '../../ecommerce-store';
   template: `
     <div appViewPanel>
       <h2 class="text-2xl font-bold mb-4">Order Summary</h2>
+
+      
+    <div class="space-y-2  pb-4">
+<ng-content select= "[checkoutItems]" />
+</div>
+
+
       <div class="space-y-3 text-lg pt-4 border-t ">
         <div class="flex justify-between">
           <span>Subtotal</span>
@@ -23,7 +30,7 @@ import { EcommerceStore } from '../../ecommerce-store';
         </div>
       </div>
 
-      <ng-content select=[actionButtons] />
+      <ng-content select="[actionButtons]" />
 
     </div>
   `,
